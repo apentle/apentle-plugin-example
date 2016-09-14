@@ -1,0 +1,24 @@
+{
+  "name": "apentle-plugin-example",
+  "version": "0.1.0",
+  "description": "An apentle plugin example!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apentle/apentle-plugin-example.git"
+  },
+  "keywords": [
+    "apentle",
+    "plugin",
+    "example"
+  ],
+  "author": "Doan Nguyen <doannd@apentle.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apentle/apentle-plugin-example/issues"
+  },
+  "homepage": "https://github.com/apentle/apentle-plugin-example#readme"
+}
