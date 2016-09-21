@@ -7,15 +7,15 @@
  */
 
 module.exports = {
-  willLoad: function() {
-    // Run before load plugin
-
+  example_popup: {
+    opacity: 0.95,
   },
-  layouts: {
-    containers: {
-      app: require('./layouts/App.js'),
-    },
+  example_input_name: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    fontSize: 22,
+    height: 44,
+    margin: 20,
+    padding: 4,
   },
-  styles: require('./styles'),
-  i18n: require('./i18n'),
 };
