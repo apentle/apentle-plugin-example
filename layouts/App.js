@@ -8,12 +8,14 @@
 
 const React = require('react');
 const {Modal, View, Text, TextInput, TouchableOpacity} = require('react-native');
+const Actions = require('redux-actions-hub');
 
 function submit() {
   if (!this.state || this.state.text === undefined || this.state.text.trim().length === 0) {
     alert(__('example_plugin.empty_name'));
   } else {
     this.setState({modalVisible: false});
+    reduxStore.dispatch(Actions.ENTER_NAME(this.state.text));
   }
 }
 
@@ -38,4 +40,7 @@ function submit() {
       </View>
     </Modal>
   </addChildren>
+  <update id="welcome">
+    <props name={this.props.name} />
+  </update>
 </layout>

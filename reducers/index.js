@@ -7,11 +7,12 @@
  * @flow
  */
 
-module.exports = {
-  example_plugin: {
-    input_name: 'Full name',
-    enter: 'Let\'s go',
-    empty_name: 'Please enter your name.',
-    welcome: 'Hi {{name}},',
-  },
+var {add} = require('redux-reducers-hub');
+
+module.exports = function() {
+  add({
+    ENTER_NAME(state, action) {
+      return action.payload;
+    },
+  }, 'name', '');
 };

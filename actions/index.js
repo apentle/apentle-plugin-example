@@ -7,11 +7,6 @@
  * @flow
  */
 
-module.exports = {
-  example_plugin: {
-    input_name: 'Full name',
-    enter: 'Let\'s go',
-    empty_name: 'Please enter your name.',
-    welcome: 'Hi {{name}},',
-  },
-};
+module.exports = [
+  'ENTER_NAME',
+];

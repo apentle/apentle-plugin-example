@@ -9,13 +9,21 @@
 module.exports = {
   willLoad: function() {
     // Run before load plugin
-
+    events.addListener('containers_app', (state, store) => {
+      // Modify mapStateToProps for component containers_app
+      state.name = store.name;
+    });
   },
   layouts: {
+    components: {
+      welcome: require('./layouts/Welcome'),
+    },
     containers: {
-      app: require('./layouts/App.js'),
+      app: require('./layouts/App'),
     },
   },
+  actions: require('./actions'),
+  reducers: require('./reducers'),
   styles: require('./styles'),
   i18n: require('./i18n'),
 };
